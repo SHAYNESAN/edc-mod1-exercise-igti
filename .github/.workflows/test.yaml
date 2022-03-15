@@ -1,10 +1,10 @@
-name: Deploy
+name: Test on PR
 on:
-    push:
+    pull_request:
     branches:[main]
 jobs:
-    deploy:
-        name: Deploy to Datalake
+    test:
+        name: Test infra on Pr
         runs-on: ubuntu-latest
 
         steps:
@@ -18,8 +18,8 @@ jobs:
         -name: Configure AWS credentials
          uses: aws-actions/configure-aws-credentials@v1
          with:
-            aws-acess-key-id:""
-            aws-secret-acess-key:""
+            aws-acess-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-acess-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws-region: us-east-2
 
         - name: Iac apply
@@ -30,5 +30,5 @@ jobs:
         $COMMAND_IAC init
         $COMMAND_IAC validade
         $COMMAND_IAC plan
-        $COMMAND_IAC apply -auto-approve
+        
         
