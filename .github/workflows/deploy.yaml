@@ -14,6 +14,10 @@ jobs:
           uses: actions/setups\-python@v2
           with:
             python-version:3.8
+            
+        - name: HashiCorp - Setup Terraform
+          user: hashicorp/setup-terraform@v1.2.1
+          
 
         - name: Configure AWS credentials
           uses: aws-actions/configure-aws-credentials@v1
