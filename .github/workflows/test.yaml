@@ -1,4 +1,4 @@
-name: Teste
+name: Test on PR
 
 
 on:
@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-    deploy:
+    test:
       name: test to Pr
       runs-on: ubuntu-latest
 
