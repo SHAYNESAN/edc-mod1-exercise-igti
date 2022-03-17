@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "dl" {
         CURSO = "EDC"
     }
 
-   server_side_encryption_configuration = {
+    server_side_encryption_configuration = {
 
         rule {
 
