@@ -26,9 +26,9 @@ jobs:
             env:
             COMMAND-IAC: terraform
         run: |
-        cd infrascture
-        $COMMAND_IAC init
-        $COMMAND_IAC validade
-        $COMMAND_IAC plan
-        $COMMAND_IAC apply -auto-approve
+         cd infrascture
+         $COMMAND_IAC init
+         $COMMAND_IAC validade
+         $COMMAND_IAC plan
+         $COMMAND_IAC apply -auto-approve
         
