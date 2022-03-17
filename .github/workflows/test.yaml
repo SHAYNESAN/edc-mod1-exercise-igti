@@ -2,11 +2,11 @@ name: Teste
 
 
 on:
-    push_request:
+    pull_request:
     branches: [main]
 
 jobs:
-    test:
+    deploy:
       name: test to Pr
       runs-on: ubuntu-latest
 
